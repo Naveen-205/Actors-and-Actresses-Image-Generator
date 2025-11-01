@@ -4,65 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Generate Form</title>
+    <title>Image Generater</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/images/icon.jpg" type="image/x-icon">
 </head>
 
 <body>
 
+    <div class="nav">
+        <h2>Image Generator Webpage for My Favourite Actors and Actresses</h2>
+    </div>
 
-    <input type="text" placeholder="Search" id="inputdata">
-    <button id="gen">Generate</button>
-    <p id="para"></p>
-    <img src="" alt="" id="image">
+    <div class="box">
+        <input type="text" placeholder="Search" id="inputdata">
+        <button id="gen">Generate</button>
+        <p id="para"></p>
+        <img src="" alt="waiting for your search" id="image">
+    </div>
 
-
-    <script>
-
-        const btn = document.getElementById("gen");
-
-        btn.addEventListener("click", (e) => {
-            const searchdata = document.getElementById("inputdata").value.toLowerCase()
-            const img = document.getElementById("image")
-            const line = document.getElementById("para")
-            line.textContent = `Your Search Result Is: ${searchdata}`
-
-            if(searchdata === "ajith"){
-                img.src = "./assets/images/Ajith Kumar.jpeg"
-            }
-
-            else if (searchdata === "vijay"){
-                img.src = "./assets/images/Thalapathy Vijay.jpeg"
-            }
-
-            else if (searchdata === "str"){
-                img.src = "./assets/images/str.jpg"   
-            }
-
-            else{
-                line.textContent = `Your Search Data Is: ${searchdata} Not Found`
-                img.src = ""
-            }
-
-            //used  switch (searchdata) {
-            //     case "ajith":
-            //         img.src = "./assets/images/ajith.jpg";
-            //         img.style.width = "250px";
-            //         img.style.height = "200px";
-            //         break;
-
-            //     case "attiboys":
-            //         img.src = "./assets/images/attiboys.jpg";
-            //         img.style.width = "500px";
-            //         img.style.height = "200px";
-            //         break;
-
-            //     default:
-            //         line.textContent = `Your Search Data Is: ${searchdata} Not Found`;
-            //         img.src = ""
-            // }
-
-        })
-    </script>
+ <script src="script.js"></script>
 
 </body>
 
